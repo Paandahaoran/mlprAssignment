@@ -22,18 +22,22 @@ resize_miniMatrix = np.hsplit(resize_rows,20)
 X_shuf_train = np.concatenate((resize_miniMatrix[0],resize_miniMatrix[1]),axis=1)
 for i in range (2,14):
     X_shuf_train = np.concatenate((X_shuf_train,resize_miniMatrix[i]),axis=1)
-
+X_shuf_train = np.matrix(X_shuf_train).T
 y_shuf_train = X_shuf_train[:,20]
 X_shuf_train = np.delete(X_shuf_train, -1, axis=1)
 
+
 # create validation dataset
 X_shuf_val = np.concatenate((resize_miniMatrix[14],resize_miniMatrix[15],resize_miniMatrix[16]),axis=1)
-y_shuf_val = X_shuf_val[:,20]
+X_shuf_val = np.matrix(X_shuf_val).T
+y_shuf_val = X_shuf_val[:,20:21]
 X_shuf_val = np.delete(X_shuf_val, -1, axis=1)
 # create test dataset
 X_shuf_test = np.concatenate((resize_miniMatrix[17],resize_miniMatrix[18],resize_miniMatrix[19]),axis=1)
-y_shuf_test = X_shuf_test[:,20]
+X_shuf_test = np.matrix(X_shuf_test).T
+y_shuf_test = X_shuf_test[:,20:21]
 X_shuf_test = np.delete(X_shuf_test, -1, axis=1)
+
 
 
 
