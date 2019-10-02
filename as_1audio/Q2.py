@@ -2,8 +2,9 @@ import numpy as np
 import  matplotlib.pyplot as plt
 import data_preprocess
 t = np.arange(0,1,0.05)
-y = np.array(data_preprocess.X_shuf_train[int(np.random()*100)].flatten())
-target = np.array(data_preprocess.y_shuf_train[77].flatten())
+line  = np.random.randint(0,100)
+y = np.array(data_preprocess.X_shuf_train[line].flatten())
+target = np.array(data_preprocess.y_shuf_train[line].flatten())
 
 
 
