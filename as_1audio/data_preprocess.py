@@ -7,7 +7,6 @@ mat_contents = sio.loadmat('amp_data.mat')
 raw_data = mat_contents.get('amp_data')
 
 
-
 '''data matrix split 70% train,15% validation 15% test'''
 feature = 21
 resize_numbers = np.resize(raw_data,(feature,int(len(raw_data)/feature)))
