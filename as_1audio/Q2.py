@@ -27,9 +27,10 @@ def fit_and_plot(phi_fn,X,yy):
 
 
 
-plt.plot(t,y[0],'bD')
+'''plt.plot(t,y[0],'bD')
 fit_and_plot(phi_linear,t,y[0])
 fit_and_plot(phi_quadratic,t,y[0])
 plt.plot(1,target,'rD')
 plt.legend(['traning points','line fit','quadratic fit','test point'],loc='lower left')
 plt.show()
+'''
